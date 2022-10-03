@@ -1,0 +1,155 @@
+
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+    font-size: 24px;
+  }
+
+
+body{
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display:grid;
+    grid-template-areas: 
+        "left right";
+    grid-template-columns: 50vw 50vw;;
+}
+
+
+
+.left{
+    grid-area: left;
+    background-color: var(--body-bg-color);
+    padding-left: 40px;
+}
+.logo{
+    width: 405px;
+    height: 105px;
+    margin-top:50px;
+}
+
+.t1{
+    color:var(--title-color);
+    font-weight: 700;
+    font-size: 1.35rem;
+    line-height: 34px;
+    margin:126px 0 0;
+    font-family: 'Work Sans';
+}
+
+.t2{
+    color:var(--text-color);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 22px;
+    margin:18px 0 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.t3{
+    color:var(--text-color);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 28px;
+    margin: 17px 0 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+form{
+    margin: 54px 0 0;
+}
+
+label{
+    color:var(--form-color);
+    font-family: 'League Spartan', sans-serif;
+    margin:0
+}
+
+.input-area{
+    margin-top:28px;
+    display:flex;
+    width: 55vw;
+    height: 59px;
+    position: relative;   
+}
+
+.input-email{
+    width:100%;
+    border:none;
+    border-left: solid 5px var(--title-color);
+    background-color: #FFFFFF;
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 0.65rem;
+    line-height: 14px;
+    padding-left:12px;
+}
+
+button{
+    border:none;
+    width: 56px;
+    background-color: var(--bg-button-color);
+    background-image: url(/img/send.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+ 
+}
+.read_first{
+    display:flex;
+    align-items: center;
+    margin-top:50px
+}
+
+.read_first a{
+    font-family: 'League Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height:28px;
+    color:var(--bg-button-color);
+    text-decoration: none;
+    margin-right: 10px;   
+}
+
+
+
+.right{
+    background-image: url(/img/read_news.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+@media (max-width: 860px) {
+    .left{
+        padding: 0 10px 0 25px;
+    }
+    .logo{
+        width:45vw;
+    }
+    .input-area{
+        width: 65vw;
+    }
+}
+
+
+@media (max-width: 620px) {
+    body{
+        display:block;
+    }
+    .left{
+        padding: 0 10px 0 25px;
+        height: 100%;
+    }
+    .logo{
+        width:70vw;
+    }
+   .input-area{
+    width: 80vw;   
+}
+}
